@@ -1,0 +1,11 @@
+<!--index.wxml-->
+<view class="container">
+
+  <view class="rich-text-wrp">
+      <text>{{motto}}</text>
+  </view>
+  <mp-loading animated="{{animated}}"  type="circle" show="{{show}}"></mp-loading>
+  <view>
+    <button type="primary" plain="true" bind:tap="uploadPic">拍照上传</button>
+  </view>
+</view>
