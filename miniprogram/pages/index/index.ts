@@ -7,7 +7,7 @@ Page({
     motto: "拍照上传解析",
     tips: '请稍后',
     show: false,
-    animated:false ,
+    animated: false,
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
@@ -21,23 +21,49 @@ Page({
     })
   },
   onLoad() {
-    // @ts-ignore
-    if (wx.getUserProfile) {
-      this.setData({
-        canIUseGetUserProfile: true
-      })
-    }
+    wx.login({
+      success: (res) => {
+        console.log(res)
+        wx.request({
+          method: 'GET',
+          url: "https://wx.tister.cn/yuepao/code2session?code=" + res.code,
+          header: {
+            'content-type': 'application/json'
+          },
+          success(res) {
+          }
+        })
+
+      }
+    })
   },
- 
-  uploadPic(e: any){
+  subTap(e: any) {
+    wx.requestSubscribeMessage({
+      tmplIds: ['GQ5WOJGSQrS9XqRKpu0iOnSLGFfWaquJCyGqPhX0N-8'],
+      success: (res) => {
+        console.log("res--->", res)
+        this.setData({
+          motto: '提示：授权成功'
+        })
+      },
+      fail: (res) => {
+        console.log("res--->", res)
+        this.setData({
+          motto: '提示：授权失败'
+        })
+      }
+    })
+  }
+  ,
+  uploadPic(e: any) {
     console.log(e)
     this.setData({
       show: !this.data.show,
-      animated:!this.data.animated
+      animated: !this.data.animated
     })
     wx.chooseMedia({
       count: 9,
-      mediaType: ['image','video'],
+      mediaType: ['image', 'video'],
       sourceType: ['album', 'camera'],
       maxDuration: 30,
       camera: 'back',
@@ -49,7 +75,7 @@ Page({
           timeout: 180000,// 2 分钟
           formData: {
             'user': 'test',
-            'openid':'myopenid',
+            'openid': 'myopenid',
           },
           success: (res) => {
             const data = res.data
@@ -59,14 +85,14 @@ Page({
             this.setData({
               motto: jsonObject.message,
               show: !this.data.show,
-              animated:!this.data.animated
+              animated: !this.data.animated
             })
           },
-          fail: (res) =>{
+          fail: (res) => {
             this.setData({
               motto: res.errMsg,
               show: !this.data.show,
-              animated:!this.data.animated
+              animated: !this.data.animated
             })
           }
         })

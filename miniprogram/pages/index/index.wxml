@@ -8,4 +8,6 @@
   <view>
     <button type="primary" plain="true" bind:tap="uploadPic">拍照上传</button>
   </view>
+  <button bindtap="subTap" hover-class="other-button-hover">允许订阅消息</button>
+
 </view>
