@@ -46,7 +46,7 @@ Page({
           url: 'https://wx.tister.cn/yuepao/upload2', //仅为示例，非真实的接口地址
           filePath: res.tempFiles[0].tempFilePath,
           name: 'file',
-          timeout: 120000,// 2 分钟
+          timeout: 180000,// 2 分钟
           formData: {
             'user': 'test',
             'openid':'myopenid',
