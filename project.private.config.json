@@ -3,5 +3,18 @@
   "projectname": "yuepao",
   "setting": {
     "compileHotReLoad": true
+  },
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "",
+          "pathName": "pages/index/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": 1011
+        }
+      ]
+    }
   }
 }

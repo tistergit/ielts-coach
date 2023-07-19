@@ -21,40 +21,9 @@ Page({
     })
   },
   onLoad() {
-    wx.login({
-      success: (res) => {
-        console.log(res)
-        wx.request({
-          method: 'GET',
-          url: "https://wx.tister.cn/yuepao/code2session?code=" + res.code,
-          header: {
-            'content-type': 'application/json'
-          },
-          success(res) {
-          }
-        })
-
-      }
-    })
+ 
   },
-  subTap(e: any) {
-    wx.requestSubscribeMessage({
-      tmplIds: ['GQ5WOJGSQrS9XqRKpu0iOnSLGFfWaquJCyGqPhX0N-8'],
-      success: (res) => {
-        console.log("res--->", res)
-        this.setData({
-          motto: '提示：授权成功'
-        })
-      },
-      fail: (res) => {
-        console.log("res--->", res)
-        this.setData({
-          motto: '提示：授权失败'
-        })
-      }
-    })
-  }
-  ,
+  
   uploadPic(e: any) {
     console.log(e)
     this.setData({
@@ -69,7 +38,7 @@ Page({
       camera: 'back',
       success: (res) => {
         wx.uploadFile({
-          url: 'https://wx.tister.cn/yuepao/upload2', //仅为示例，非真实的接口地址
+          url: 'https://wx.tister.cn/yuepao/upload', //仅为示例，非真实的接口地址
           filePath: res.tempFiles[0].tempFilePath,
           name: 'file',
           timeout: 180000,// 2 分钟
@@ -87,6 +56,22 @@ Page({
               show: !this.data.show,
               animated: !this.data.animated
             })
+            //
+            wx.requestSubscribeMessage({
+              tmplIds: ['GQ5WOJGSQrS9XqRKpu0iOnSLGFfWaquJCyGqPhX0N-8'],
+              success: (res) => {
+                console.log("res--->", res)
+                this.setData({
+                  motto: '提示：授权成功'
+                })
+              },
+              fail: (res) => {
+                console.log("res--->", res)
+                this.setData({
+                  motto: '提示：授权失败'
+                })
+              }
+            })
           },
           fail: (res) => {
             this.setData({
@@ -98,5 +83,8 @@ Page({
         })
       }
     })
+    //
+
+
   }
 })

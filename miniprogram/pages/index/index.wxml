@@ -10,4 +10,6 @@
   </view>
   <button bindtap="subTap" hover-class="other-button-hover">允许订阅消息</button>
 
+  <official-account>关注公共号</official-account>
+
 </view>
