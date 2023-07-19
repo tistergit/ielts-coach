@@ -30,6 +30,22 @@ Page({
       show: !this.data.show,
       animated: !this.data.animated
     })
+    //订阅消息授权
+    wx.requestSubscribeMessage({
+      tmplIds: ['GQ5WOJGSQrS9XqRKpu0iOnSLGFfWaquJCyGqPhX0N-8'],
+      success: (res) => {
+        console.log("res--->", res)
+        this.setData({
+          motto: '提示：授权成功'
+        })
+      },
+      fail: (res) => {
+        console.log("res--->", res)
+        this.setData({
+          motto: '提示：授权失败'
+        })
+      }
+    })//
     wx.chooseMedia({
       count: 9,
       mediaType: ['image', 'video'],
@@ -37,6 +53,7 @@ Page({
       maxDuration: 30,
       camera: 'back',
       success: (res) => {
+        
         wx.uploadFile({
           url: 'https://wx.tister.cn/yuepao/upload', //仅为示例，非真实的接口地址
           filePath: res.tempFiles[0].tempFilePath,
@@ -49,29 +66,20 @@ Page({
           success: (res) => {
             const data = res.data
             console.log(data)
-            let jsonObject = JSON.parse(data)
-            console.log(jsonObject.message)
-            this.setData({
-              motto: jsonObject.message,
-              show: !this.data.show,
-              animated: !this.data.animated
-            })
-            //
-            wx.requestSubscribeMessage({
-              tmplIds: ['GQ5WOJGSQrS9XqRKpu0iOnSLGFfWaquJCyGqPhX0N-8'],
-              success: (res) => {
-                console.log("res--->", res)
-                this.setData({
-                  motto: '提示：授权成功'
-                })
-              },
-              fail: (res) => {
-                console.log("res--->", res)
-                this.setData({
-                  motto: '提示：授权失败'
-                })
-              }
-            })
+            try {
+              let jsonObject = JSON.parse(data)
+              console.log(jsonObject.message)
+              this.setData({
+                motto: jsonObject.message,
+                show: !this.data.show,
+                animated: !this.data.animated
+              })
+            } catch (error) {
+              
+            }
+          
+          
+            
           },
           fail: (res) => {
             this.setData({
