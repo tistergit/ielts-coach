@@ -1,4 +1,6 @@
 // app.ts
+towxml:require('/towxml/index')
+
 App<IAppOption>({
   globalData: {},
   onLaunch() {

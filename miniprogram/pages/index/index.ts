@@ -6,6 +6,11 @@ Page({
   data: {
     motto: "拍照上传解析",
     tips: '请稍后',
+    htmlSnip:
+      `## hello
+### hi
+hello tister`,
+    web_src: "https://wx.tister.cn/yuepao/static/test.md", //webview内嵌的url
     show: false,
     animated: false,
     userInfo: {},
@@ -21,9 +26,9 @@ Page({
     })
   },
   onLoad() {
- 
+
   },
-  
+
   uploadPic(e: any) {
     console.log(e)
     this.setData({
@@ -53,7 +58,7 @@ Page({
       maxDuration: 30,
       camera: 'back',
       success: (res) => {
-        
+
         wx.uploadFile({
           url: 'https://wx.tister.cn/yuepao/upload', //仅为示例，非真实的接口地址
           filePath: res.tempFiles[0].tempFilePath,
@@ -75,11 +80,11 @@ Page({
                 animated: !this.data.animated
               })
             } catch (error) {
-              
+
             }
-          
-          
-            
+
+
+
           },
           fail: (res) => {
             this.setData({
