@@ -3,9 +3,16 @@
 <view class="container">
   <view class="page-body">
     <view class="page-section page-section-spacing">
-      <view class="text-box" scroll-y="true" scroll-top="{{scrollTop}}">
+      <view class="text-box" scroll-y="true" >
         <text>{{text}}</text>
       </view>
     </view>
   </view>
+  <view class="page-section-spacing">
+        <scroll-view scroll-y="true" style="height: 300rpx;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+          <view id="demo1" class="scroll-view-item demo-text-1"></view>
+          <view id="demo2"  class="scroll-view-item demo-text-2"></view>
+          <view id="demo3" class="scroll-view-item demo-text-3"></view>
+        </scroll-view>
+      </view>
 </view>
