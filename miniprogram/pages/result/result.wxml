@@ -1,0 +1,11 @@
+<!--pages/result/result.wxml-->
+<!-- <web-view src="{{web_src}}"> </web-view> -->
+<view class="container">
+  <view class="page-body">
+    <view class="page-section page-section-spacing">
+      <view class="text-box" scroll-y="true" scroll-top="{{scrollTop}}">
+        <text>{{text}}</text>
+      </view>
+    </view>
+  </view>
+</view>

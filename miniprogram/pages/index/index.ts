@@ -35,22 +35,7 @@ hello tister`,
       show: !this.data.show,
       animated: !this.data.animated
     })
-    //订阅消息授权
-    wx.requestSubscribeMessage({
-      tmplIds: ['GQ5WOJGSQrS9XqRKpu0iOnSLGFfWaquJCyGqPhX0N-8'],
-      success: (res) => {
-        console.log("res--->", res)
-        this.setData({
-          motto: '提示：授权成功'
-        })
-      },
-      fail: (res) => {
-        console.log("res--->", res)
-        this.setData({
-          motto: '提示：授权失败'
-        })
-      }
-    })//
+    
     wx.chooseMedia({
       count: 9,
       mediaType: ['image', 'video'],
@@ -74,15 +59,18 @@ hello tister`,
             try {
               let jsonObject = JSON.parse(data)
               console.log(jsonObject.message)
+              wx.setStorageSync('userInfo', jsonObject.message)
               this.setData({
                 motto: jsonObject.message,
                 show: !this.data.show,
                 animated: !this.data.animated
               })
-            } catch (error) {
-
+            } catch (err) {
+              console.error(err)
             }
-
+            wx.navigateTo({
+              url:'/pages/result/result'
+            })
 
 
           },

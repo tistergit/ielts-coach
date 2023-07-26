@@ -1,24 +1,9 @@
 <!--index.wxml-->
 <view class="container">
-
-  <view class="rich-text-wrp">
-    <text>{{motto}}</text>
-    
-  </view>
-  <view>
-    <rich-text nodes="{{htmlSnip}}"></rich-text>
-  </view>
-
-  <web-view src="{{web_src}}"> </web-view>
-
-  
   <mp-loading animated="{{animated}}" type="circle" show="{{show}}"></mp-loading>
   <view>
     <button type="primary" plain="true" bind:tap="uploadPic">拍照上传</button>
   </view>
-  <button bindtap="subTap" hover-class="other-button-hover">允许订阅消息</button>
-
-
 
   <official-account>关注公共号</official-account>
 
