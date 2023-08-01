@@ -6,13 +6,49 @@ Page({
   data: {
     motto: "拍照上传解析",
     tips: '请稍后',
-    productList: {
-    },
-    htmlSnip:
-      `## hello
-### hi
-hello tister`,
-    web_src: "https://wx.tister.cn/yuepao/static/test.md", //webview内嵌的url
+    grids: [
+      {
+        imgurl: "https://hackweek.oss-cn-shanghai.aliyuncs.com/hw18/hackwork/weapp/icon1.png",
+        title: "招聘"
+      },
+      {
+        imgurl: "https://hackweek.oss-cn-shanghai.aliyuncs.com/hw18/hackwork/weapp/icon2.png",
+        title: "房产"
+      },
+      {
+        imgurl: "https://hackweek.oss-cn-shanghai.aliyuncs.com/hw18/hackwork/weapp/icon3.png",
+        title: "二手车"
+      },
+      {
+        imgurl: "https://hackweek.oss-cn-shanghai.aliyuncs.com/hw18/hackwork/weapp/icon4.png",
+        title: "二手"
+      },
+      {
+        imgurl: "https://hackweek.oss-cn-shanghai.aliyuncs.com/hw18/hackwork/weapp/icon5.png",
+        title: "招盟"
+      },
+      {
+        imgurl: "https://hackweek.oss-cn-shanghai.aliyuncs.com/hw18/hackwork/weapp/icon6.png",
+        title: "兼职"
+      },
+      {
+        imgurl: "https://hackweek.oss-cn-shanghai.aliyuncs.com/hw18/hackwork/weapp/icon7.png",
+        title: "本地"
+      },
+      {
+        imgurl: "https://hackweek.oss-cn-shanghai.aliyuncs.com/hw18/hackwork/weapp/icon8.png",
+        title: "家政"
+      },
+      {
+        imgurl: "https://hackweek.oss-cn-shanghai.aliyuncs.com/hw18/hackwork/weapp/icon9.png",
+        title: "夺宝"
+      },
+      {
+        imgurl: "https://hackweek.oss-cn-shanghai.aliyuncs.com/hw18/hackwork/weapp/icon10.png",
+        title: "送现金"
+      },
+    ],
+
     show: false,
     animated: false,
     userInfo: {},
@@ -83,6 +119,14 @@ hello tister`,
               animated: !this.data.animated
             })
           }
+        })
+      },
+      fail: (res) => {
+        console.log(res)
+        this.setData({
+          motto: res.errMsg,
+          show: !this.data.show,
+          animated: !this.data.animated
         })
       }
     })

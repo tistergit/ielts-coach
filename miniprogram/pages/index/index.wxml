@@ -1,23 +1,52 @@
 <!--index.wxml-->
 <view class="container">
-  <van-grid column-num="2" gutter="5">
-  <van-grid-item use-slot wx:for="{{productList}}" wx:key="index" class="text-class" style="width:300px" >
-  <view class="product_box" >
-     <image src="{{item.picture}}" style="width: 150px; height: 100px;" />
-            <view>{{item.shop}}</view>
-            <view>价格：￥{{item.price}}</view>
-            <view>{{item.product}}</view>
+  <view class="section" >
+    <view class="tui-table-view">
+      <view class="tui-col-3" bind:tap="uploadPic">
+        <image src="/images/icon/lelts.png" style="height:30px;width:30px;" />
+        <view>雅思助手</view>
+      </view>
+      <view class="tui-col-3">
+        <image src="/images/icon/todo.png" style="height:30px;width:30px;" />
+        <view>Email</view>
+      </view>
+      <view class="tui-col-3">
+        <image src="/images/icon/todo.png" style="height:30px;width:30px;" />
+        <view>Chat</view>
+      </view>
+      <view class="tui-col-3">
+        <image src="/images/icon/todo.png" style="height:30px;width:30px;" />
+        <view>location</view>
+      </view>
+      <view class="tui-col-3">
+        <image src="/images/icon/todo.png" style="height:30px;width:30px;" />
+        <view>search</view>
+      </view>
+      <view class="tui-col-3">
+        <image src="/images/icon/todo.png" style="height:30px;width:30px;" />
+        <view>phone</view>
+      </view>
+      <view class="tui-col-3">
+        <image src="/images/icon/todo.png" style="height:30px;width:30px;" />
+        <view>setting</view>
+      </view>
+      <view class="tui-col-3">
+        <image src="/images/icon/todo.png" style="height:30px;width:30px;" />
+        <view>about</view>
+      </view>
+      <view class="tui-col-3">
+        <image src="/images/icon/todo.png" style="height:30px;width:30px;" />
+        <view>more</view>
+      </view>
+    </view>
   </view>
-  </van-grid-item>
-   
-</van-grid>
-
 
   <mp-loading animated="{{animated}}" type="circle" show="{{show}}"></mp-loading>
+  <!--
   <view>
     <button type="primary" plain="true" bind:tap="uploadPic">拍照上传</button>
   </view>
-
+-->
   <official-account>关注公共号</official-account>
 
 </view>
