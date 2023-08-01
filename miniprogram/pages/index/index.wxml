@@ -1,5 +1,18 @@
 <!--index.wxml-->
 <view class="container">
+  <van-grid column-num="2" gutter="5">
+  <van-grid-item use-slot wx:for="{{productList}}" wx:key="index" class="text-class" style="width:300px" >
+  <view class="product_box" >
+     <image src="{{item.picture}}" style="width: 150px; height: 100px;" />
+            <view>{{item.shop}}</view>
+            <view>价格：￥{{item.price}}</view>
+            <view>{{item.product}}</view>
+  </view>
+  </van-grid-item>
+   
+</van-grid>
+
+
   <mp-loading animated="{{animated}}" type="circle" show="{{show}}"></mp-loading>
   <view>
     <button type="primary" plain="true" bind:tap="uploadPic">拍照上传</button>

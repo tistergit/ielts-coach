@@ -6,6 +6,8 @@ Page({
   data: {
     motto: "拍照上传解析",
     tips: '请稍后',
+    productList: {
+    },
     htmlSnip:
       `## hello
 ### hi
