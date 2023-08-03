@@ -5,50 +5,6 @@ const app = getApp<IAppOption>()
 Page({
   data: {
     motto: "拍照上传解析",
-    tips: '请稍后',
-    grids: [
-      {
-        imgurl: "https://hackweek.oss-cn-shanghai.aliyuncs.com/hw18/hackwork/weapp/icon1.png",
-        title: "招聘"
-      },
-      {
-        imgurl: "https://hackweek.oss-cn-shanghai.aliyuncs.com/hw18/hackwork/weapp/icon2.png",
-        title: "房产"
-      },
-      {
-        imgurl: "https://hackweek.oss-cn-shanghai.aliyuncs.com/hw18/hackwork/weapp/icon3.png",
-        title: "二手车"
-      },
-      {
-        imgurl: "https://hackweek.oss-cn-shanghai.aliyuncs.com/hw18/hackwork/weapp/icon4.png",
-        title: "二手"
-      },
-      {
-        imgurl: "https://hackweek.oss-cn-shanghai.aliyuncs.com/hw18/hackwork/weapp/icon5.png",
-        title: "招盟"
-      },
-      {
-        imgurl: "https://hackweek.oss-cn-shanghai.aliyuncs.com/hw18/hackwork/weapp/icon6.png",
-        title: "兼职"
-      },
-      {
-        imgurl: "https://hackweek.oss-cn-shanghai.aliyuncs.com/hw18/hackwork/weapp/icon7.png",
-        title: "本地"
-      },
-      {
-        imgurl: "https://hackweek.oss-cn-shanghai.aliyuncs.com/hw18/hackwork/weapp/icon8.png",
-        title: "家政"
-      },
-      {
-        imgurl: "https://hackweek.oss-cn-shanghai.aliyuncs.com/hw18/hackwork/weapp/icon9.png",
-        title: "夺宝"
-      },
-      {
-        imgurl: "https://hackweek.oss-cn-shanghai.aliyuncs.com/hw18/hackwork/weapp/icon10.png",
-        title: "送现金"
-      },
-    ],
-
     show: false,
     animated: false,
     userInfo: {},
@@ -64,7 +20,19 @@ Page({
     })
   },
   onLoad() {
+    this.setData({
+    show: false,
+    animated: false
+    })
+  },
 
+  todo(e: any){
+    wx.showToast({
+      title: '功能建设中！',
+      icon: 'none',
+      duration: 5000
+    })
+    
   },
 
   uploadPic(e: any) {
@@ -83,7 +51,7 @@ Page({
       success: (res) => {
 
         wx.uploadFile({
-          url: 'https://wx.tister.cn/yuepao/upload', //仅为示例，非真实的接口地址
+          url: 'https://wx.tister.cn/yuepao/upload/ielts', //仅为示例，非真实的接口地址
           filePath: res.tempFiles[0].tempFilePath,
           name: 'file',
           timeout: 180000,// 2 分钟
@@ -114,7 +82,6 @@ Page({
           },
           fail: (res) => {
             this.setData({
-              motto: res.errMsg,
               show: !this.data.show,
               animated: !this.data.animated
             })
@@ -124,7 +91,6 @@ Page({
       fail: (res) => {
         console.log(res)
         this.setData({
-          motto: res.errMsg,
           show: !this.data.show,
           animated: !this.data.animated
         })

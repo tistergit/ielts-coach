@@ -2,7 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/logs/logs",
-    "pages/result/result"
+    "pages/result/result",
+    "pages/about/about"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -11,15 +12,20 @@
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
-    "list": [{
-      "pagePath": "pages/index/index",
-      "text": "首页",
-      "iconPath": "images/icon/lelts.png",
-      "selectedIconPath": "images/icon/ielts2.png"
-    }, {
-      "pagePath": "pages/logs/logs",
-      "text": "日志"
-    }]
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "工具",
+        "iconPath": "images/icon/tools-fotor-2023080471048.png",
+        "selectedIconPath": "images/icon/tools-fotor-2023080471048.png"
+      },
+      {
+        "pagePath": "pages/about/about",
+        "text": "帮助",
+        "iconPath": "images/icon/help.png",
+        "selectedIconPath": "images/icon/help.png"
+      }
+    ]
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json",
@@ -28,6 +34,4 @@
     "weui": true
   },
   "componentFramework": "glass-easel"
- 
-
 }
