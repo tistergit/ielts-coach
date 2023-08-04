@@ -7,7 +7,7 @@
         <image src="/images/icon/lelts.png" style="height:30px;width:30px;" />
         <view>雅思作文</view>
       </view>
-      <view class="tui-col-3">
+      <view class="tui-col-3" bind:tap="uploadPic">
         <image src="/images/icon/ocr.jpeg" style="height:30px;width:30px;" />
         <view>OCR</view>
       </view>
@@ -15,27 +15,27 @@
         <image src="/images/icon/zuowen.png" style="height:30px;width:30px;" />
         <view>高考作文</view>
       </view>
-      <view class="tui-col-3">
+      <view class="tui-col-3" bind:tap="todo">
         <image src="/images/icon/meiyan.jpeg" style="height:30px;width:30px;" />
         <view>照片美颜</view>
       </view>
-      <view class="tui-col-3">
+      <view class="tui-col-3" bind:tap="todo">
         <image src="/images/icon/jianli.jpeg" style="height:30px;width:30px;" />
         <view>简历助手</view>
       </view>
-      <view class="tui-col-3">
+      <view class="tui-col-3" bind:tap="todo">
         <image src="/images/icon/zufang.png" style="height:30px;width:30px;" />
         <view>租房合同</view>
       </view>
-      <view class="tui-col-3">
+      <view class="tui-col-3" bind:tap="todo">
         <image src="/images/icon/todo.png" style="height:30px;width:30px;" />
         <view>setting</view>
       </view>
-      <view class="tui-col-3">
+      <view class="tui-col-3" bind:tap="todo">
         <image src="/images/icon/todo.png" style="height:30px;width:30px;" />
         <view>about</view>
       </view>
-      <view class="tui-col-3">
+      <view class="tui-col-3" bind:tap="todo">
         <image src="/images/icon/todo.png" style="height:30px;width:30px;" />
         <view>more</view>
       </view>

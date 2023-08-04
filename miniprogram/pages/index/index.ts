@@ -28,9 +28,9 @@ Page({
 
   todo(e: any){
     wx.showToast({
-      title: '功能建设中！',
+      title: '功能建设中，敬请期待！！！',
       icon: 'none',
-      duration: 5000
+      duration: 2000
     })
     
   },
