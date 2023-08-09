@@ -32,8 +32,8 @@
         <view>代码分析</view>
       </view>
       <view class="tui-col-3" bind:tap="todo">
-        <image src="/images/icon/todo.png" style="height:30px;width:30px;" />
-        <view>about</view>
+        <image src="/images/icon/shiren.jpeg" style="height:30px;width:30px;" />
+        <view>作诗助手</view>
       </view>
       <view class="tui-col-3" bind:tap="todo">
         <image src="/images/icon/todo.png" style="height:30px;width:30px;" />
