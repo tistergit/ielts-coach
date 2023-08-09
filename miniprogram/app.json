@@ -8,7 +8,7 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Weixin",
+    "navigationBarTitleText": "实用工具",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
@@ -16,8 +16,8 @@
       {
         "pagePath": "pages/index/index",
         "text": "工具",
-        "iconPath": "images/icon/tools-fotor-2023080471048.png",
-        "selectedIconPath": "images/icon/tools-fotor-2023080471048.png"
+        "iconPath": "images/icon/tools-icon.png",
+        "selectedIconPath": "images/icon/tools-icon.png"
       },
       {
         "pagePath": "pages/about/about",

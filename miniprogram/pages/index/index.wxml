@@ -3,11 +3,11 @@
   <mp-loading animated="{{animated}}" type="circle" show="{{show}}"></mp-loading>
   <view class="section" >
     <view class="tui-table-view">
-      <view class="tui-col-3" bind:tap="uploadPic">
+      <view class="tui-col-3" bind:tap="uploadPic" id="ielts">
         <image src="/images/icon/lelts.png" style="height:30px;width:30px;" />
         <view>雅思作文</view>
       </view>
-      <view class="tui-col-3" bind:tap="uploadPic">
+      <view class="tui-col-3" bind:tap="uploadPic" id="ocr">
         <image src="/images/icon/ocr.jpeg" style="height:30px;width:30px;" />
         <view>OCR</view>
       </view>
@@ -28,8 +28,8 @@
         <view>租房合同</view>
       </view>
       <view class="tui-col-3" bind:tap="todo">
-        <image src="/images/icon/todo.png" style="height:30px;width:30px;" />
-        <view>setting</view>
+        <image src="/images/icon/chengxu.jpeg" style="height:30px;width:30px;" />
+        <view>代码分析</view>
       </view>
       <view class="tui-col-3" bind:tap="todo">
         <image src="/images/icon/todo.png" style="height:30px;width:30px;" />
