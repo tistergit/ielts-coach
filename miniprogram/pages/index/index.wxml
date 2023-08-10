@@ -11,9 +11,9 @@
         <image src="/images/icon/ocr.jpeg" style="height:30px;width:30px;" />
         <view>OCR</view>
       </view>
-      <view class="tui-col-3" bind:tap="todo">
-        <image src="/images/icon/zuowen.png" style="height:30px;width:30px;" />
-        <view>高考作文</view>
+      <view class="tui-col-3" bind:tap="uploadPic" id="fanyi">
+        <image src="/images/icon/fanyi.png" style="height:30px;width:30px;" />
+        <view>翻译助手</view>
       </view>
       <view class="tui-col-3" bind:tap="todo">
         <image src="/images/icon/meiyan.jpeg" style="height:30px;width:30px;" />
@@ -24,8 +24,8 @@
         <view>简历助手</view>
       </view>
       <view class="tui-col-3" bind:tap="todo">
-        <image src="/images/icon/zufang.png" style="height:30px;width:30px;" />
-        <view>租房合同</view>
+        <image src="/images/icon/zuowen.png" style="height:30px;width:30px;" />
+        <view>高考作文</view>
       </view>
       <view class="tui-col-3" bind:tap="todo">
         <image src="/images/icon/chengxu.jpeg" style="height:30px;width:30px;" />
@@ -33,11 +33,11 @@
       </view>
       <view class="tui-col-3" bind:tap="todo">
         <image src="/images/icon/shiren.jpeg" style="height:30px;width:30px;" />
-        <view>作诗助手</view>
+        <view>写诗助手</view>
       </view>
       <view class="tui-col-3" bind:tap="todo">
-        <image src="/images/icon/todo.png" style="height:30px;width:30px;" />
-        <view>more</view>
+        <image src="/images/icon/lvyou.png" style="height:30px;width:30px;" />
+        <view>旅行助手</view>
       </view>
     </view>
   </view>

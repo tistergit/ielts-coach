@@ -25,7 +25,7 @@ Page({
     wx.showToast({
       title: '功能建设中，敬请期待.',
       icon: 'none',
-      duration: 2000
+      duration: 1000
     })
     
   },
