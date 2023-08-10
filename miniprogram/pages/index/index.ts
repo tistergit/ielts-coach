@@ -47,7 +47,7 @@ Page({
       success: (res) => {
 
         wx.uploadFile({
-          url: 'https://wx.tister.cn/yuepao/upload/' + func_id, //仅为示例，非真实的接口地址
+          url: 'https://wx.tister.cn/dev/upload/' + func_id, //仅为示例，非真实的接口地址
           filePath: res.tempFiles[0].tempFilePath,
           name: 'file',
           timeout: 180000,// 2 分钟
